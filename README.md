@@ -35,7 +35,7 @@ npm run dev
 ```
 
 ## Live Demo
-You can try clim8 live at: [clim8.polido.pt](https://clim8.polido.pt/)
+You can try clim8 at: [clim8.polido.pt](https://clim8.polido.pt/)
 
 ## Notice
 
