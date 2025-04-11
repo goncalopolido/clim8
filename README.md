@@ -1,6 +1,6 @@
 # clim8
 
-A beautiful, minimalistic weather app that delivers real-time data using the OpenWeather API.
+A clean, minimalistic weather app that delivers real-time data using the OpenWeather API.
 
 ![image](https://github.com/user-attachments/assets/3da24ac2-6fb4-439b-9700-e609d5c643e9)
 
