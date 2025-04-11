@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --container-bg: rgba(255, 255, 255, 0.95);
+            --text-color: #1a1a1a;
+            --card-bg: #ffffff;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --btn-bg: #ffffff;
+            --btn-hover: #f5f5f5;
+            --btn-text: #1a1a1a;
+            --btn-outline: #e0e0e0;
+            --border-radius: 4px;
+            --transition-speed: 0.2s;
+        }
+
+        .dark-mode {
+            --bg-color: #000000;
+            --container-bg: rgba(0, 0, 0, 0.95);
+            --text-color: #ffffff;
+            --card-bg: #000000;
+            --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            --btn-bg: #000000;
+            --btn-hover: #1a1a1a;
+            --btn-text: #ffffff;
+            --btn-outline: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            background: var(--bg-color);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Roboto", sans-serif;
+            color: var(--text-color);
+            transition: all var(--transition-speed) ease;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: var(--container-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            padding: 40px;
+            transition: all var(--transition-speed) ease;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .error-message {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            transition: all var(--transition-speed) ease;
+            background-color: transparent;
+            border: 1px solid var(--btn-outline);
+            border-radius: var(--border-radius);
+        }
+
+        .home-link:hover {
+            background-color: var(--btn-hover);
+        }
+
+        .home-icon {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+            
+            .error-code {
+                font-size: 96px;
+            }
+            
+            .error-message {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .error-code {
+                font-size: 72px;
+            }
+            
+            .error-message {
+                font-size: 18px;
+            }
+
+            .home-link {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark-mode');
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark-mode');
+            } else {
+                document.documentElement.classList.remove('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <div class="error-message">Not found</div>
+        <a href="/" class="home-link">
+            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Return to Home
+        </a>
+    </div>
+</body>
+</html>

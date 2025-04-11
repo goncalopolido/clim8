@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clim8.polido.pt</title>
+    <link rel="icon" href="src/svg/cloudy-black-logo.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="src/svg/cloudy-white-logo.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>clim8</h1>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search for a location...">
+                    <div class="suggestions" id="suggestions"></div>
+                    <div class="search-error" id="search-error">
+                        Not found. To make search more precise put the city's name, comma, 2-letter country code (ISO3166).
+                    </div>
+                </div>
+                <button class="btn btn-icon btn-outline" id="location-btn">
+                    <img src="src/svg/location.svg" alt="Location" class="location-icon" width="16" height="16">
+                </button>
+                <div class="unit-toggle">
+                    <button class="btn btn-small btn-active" id="metric-btn" data-unit="metric">°C, m/s</button>
+                    <button class="btn btn-small btn-outline" id="imperial-btn" data-unit="imperial">°F, mph</button>
+                </div>
+                <div class="theme-toggle">
+                    <button class="btn btn-icon btn-small" id="light-btn">
+                        <img src="src/svg/sun.svg" alt="Light mode" width="16" height="16" class="theme-icon">
+                    </button>
+                    <button class="btn btn-icon btn-small" id="dark-btn">
+                        <img src="src/svg/moon.svg" alt="Dark mode" width="16" height="16" class="theme-icon">
+                    </button>
+                </div>
+                <a href="https://github.com/goncalopolido/clim8" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-outline github-btn">
+                    <img src="src/svg/github.svg" alt="GitHub" class="github-icon" width="16" height="16">
+                </a>
+            </div>
+        </header>
+        
+        <div class="error-message" id="error-message">
+            Could not get your location.
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="loading-text">Loading...</div>
+        </div>
+        
+        <section class="today-overview" id="today-overview">
+            <div class="location-date">
+                <div class="location">
+                    <h2 id="location-name">--</h2>
+                    <div class="weather-description" id="weather-description">--</div>
+                    <div class="wind-description" id="wind-description">--</div>
+                </div>
+                <div class="date" id="current-date">--</div>
+            </div>
+            
+            <div class="weather-main">
+                <div class="temp-container">
+                    <div class="temperature" id="current-temp">--°</div>
+                    <div class="feels-like" id="feels-like">Feels like --°</div>
+                </div>
+                <div class="weather-icon-placeholder" id="weather-icon-placeholder">--</div>
+                <img id="weather-icon" class="hidden" src="/placeholder.svg" alt="" width="140" height="140">
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-label">Wind Speed</span>
+                    <span class="detail-value" id="wind-speed">--</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span class="detail-value" id="humidity">--%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Pressure</span>
+                    <span class="detail-value" id="pressure">-- hPa</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Visibility</span>
+                    <span class="detail-value" id="visibility">--</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Sunrise</span>
+                    <span class="detail-value" id="sunrise">--:--</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Sunset</span>
+                    <span class="detail-value" id="sunset">--:--</span>
+                </div>
+            </div>
+        </section>
+        
+        <div class="forecast-container">
+            <div class="forecast-title">
+                <span>5-Day Forecast (3-hour intervals)</span>
+            </div>
+            <div class="day-buttons" id="day-buttons">
+            </div>
+            <div class="forecast-days" id="forecast-days">
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+</body>
+</html>
