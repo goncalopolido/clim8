@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const fetch = require('node-fetch');
+
+const api = require("./routes/api");
+
 require('dotenv').config();
 
 const app = express();
@@ -10,7 +13,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.static('public'));
 
-const API_KEY = process.env.OPENWEATHER_API_KEY;
+app.use("/api", api);
 
 app.get('/api/weather', async (req, res) => {
   const { lat, lon, units } = req.query;
