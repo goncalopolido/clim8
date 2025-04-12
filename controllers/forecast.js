@@ -13,3 +13,7 @@ const getForecast = async function (req, res){
     res.status(500).json({ error: 'Failed to fetch forecast data' });
   }
 };
+
+module.exports = {
+    getForecast
+}
