@@ -35,7 +35,8 @@ npm run dev
 ```
 
 ## Live Demo
-You can try clim8 at: [clim8.vercel.app](https://clim8.vercel.app/)
+You can try clim8 at [clim8.polido.pt](https://clim8.polido.pt) — this is the main instance.
+If it's not working, you can use the fallback at [clim8.vercel.app](https://clim8.vercel.app).
 
 ## Notice
 
