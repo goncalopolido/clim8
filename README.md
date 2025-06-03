@@ -29,7 +29,7 @@ cp .env.example .env
 # Edit .env and add your OpenWeather API key
 
 # Start the server
-npm run dev
+npm start
 
 # clim8 is now running on http://localhost:3000
 ```
