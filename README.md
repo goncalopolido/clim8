@@ -55,9 +55,6 @@ cp .env.example .env
 
 Edit the `.env` file and add your OpenWeather API key.
 
-> [!IMPORTANT]
-> A valid OpenWeather API key is required. The application will not function correctly without it.
-
 Start the server:
 
 ```bash
@@ -74,7 +71,7 @@ http://localhost:3000
 
 ## Live Demo
 
-A public instance of clim8 is available at **[clim8.vercel.app](https://clim8.vercel.app)**.
+The latest public version of clim8 is available at **[clim8.polido.pt](https://clim8.polido.pt)**.
 
 ---
 
